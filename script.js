@@ -16,17 +16,22 @@ function convertToRoman(num) {
     ];
 
   //your code here
-	let result = '';
+	let str = " ";
+	// arr[i][1]
 
-	for(let i = 0; i < romanNumerals.length; i++)
-		{
-			const [symbol, value] = romanNumerals[i];
-        while (num >= value) {
-            result += symbol;
-            num -= value;
-			}
+	// let [val1, val2] = arr[1]
+
+	for(let i =0; i<romanNumerals.length;i++){
+		const [symbol, val] = arr[i];
+		while(num>=val){
+			result +=symbol;
+			num -=value;
 		}
-	return result;
+	}
+
+	return str;
+	
+	
 }
 
 // Test cases  
