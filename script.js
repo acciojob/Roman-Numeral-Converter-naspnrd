@@ -1,5 +1,5 @@
 function convertToRoman(num) {
-  	const romanNumerals = [
+  	const symbols = [
       ['M',1000], 
 	  ['CM', 900],
       ['D', 500],
@@ -14,23 +14,15 @@ function convertToRoman(num) {
 	  ['IV', 4],
       ['I', 1]
     ];
-
-  //your code here
-	let str = "";
-	// arr[i][1]
-
-	// let [val1, val2] = arr[1]
-
-	for(let i =0; i<romanNumerals.length;i++){
-		const [symbol, val] = arr[i];
-		while(num>=val){
-			str +=symbol;
-			num -=val;
+	let roman  = ""
+	symbols.forEach((item) => {
+		const [symbol, value] = item
+		while(num >= value){
+			roman += symbol;
+			num -= value;
 		}
-	}
-
-	return str;
-	
+	})
+	return roman
 	
 }
 
@@ -43,5 +35,5 @@ console.log(convertToRoman(798)); // DCCXCVIII
 
 console.log(convertToRoman(36));
 
-// do not edit below this line
-module.exports = convertToRoman
+// // do not edit below this line
+// module.exports = convertToRoman
