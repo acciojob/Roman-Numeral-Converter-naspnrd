@@ -18,7 +18,7 @@ function convertToRoman(num) {
 	let roman = "";
 	symbols.forEach((item) => {
 		const [symbol, value] = item;
-		while(num > value) {
+		while(num >= value) {
 			roman += symbol;
 			num -= value;
 		}
